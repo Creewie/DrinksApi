@@ -1,14 +1,9 @@
-export default function Pokemon({Pokedex}){
-
+export default function Pokemon(props){
 
     return(
         <>
-            <h1>Lista próbna</h1>
-            <ul>
-                {
-                    Pokemon.map(item=><li key={pokemon.name}>{pokemon.sprites}, {pokemon.types}</li>)
-                }
-            </ul>
+            <h1>Pokemon: {}</h1>
+           
         </>
     )
 }
