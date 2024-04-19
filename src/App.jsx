@@ -1,6 +1,4 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Pokemon from './Pokemons'
 
@@ -16,15 +14,13 @@ function App() {
     })
     .then(data => {
       setPokemon(data)
-      console.log(data.types[0].type.name)
     })
     .catch(err => console.log(err.message))
   }
 
   return (
     <>
-      <h1>Pokedex</h1>
-      <button onClick={Pokedex}>Pobierz dane</button>
+      <button onClick={Pokedex}>Losuj Pokemona!</button>
       <Pokemon poke={pokemon}/>
     </>
   )
