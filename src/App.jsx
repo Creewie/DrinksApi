@@ -7,18 +7,16 @@ import Pokemon from './Pokemons'
 function App() {
   const [pokemon, setPokemon] = useState(null)
 
-// api = `https://pokeapi.co/api/v2/pokemon/${numer}`
+  var rndm = Math.floor(Math.random() * 1025 + 1);
+
   const Pokedex = () => {
-    fetch("https://pokeapi.co/api/v2/pokemon/35")
+    fetch(`https://pokeapi.co/api/v2/pokemon/${rndm}`)
     .then(response =>{
-      //console.log(response)
       return response.json()
     })
     .then(data => {
-      console.log(data)
-      console.log(data.types[0].type.name)
       setPokemon(data)
-      console.log(`pokemon ${pokemon}`)
+      console.log(data.types[0].type.name)
     })
     .catch(err => console.log(err.message))
   }
