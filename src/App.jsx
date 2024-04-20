@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import Pokemon from './Pokemons'
+import Zdjecie from './Zdjecie'
+import Audio from './Audio'
 
 function App() {
   const [pokemon, setPokemon] = useState(null)
@@ -14,14 +16,19 @@ function App() {
     })
     .then(data => {
       setPokemon(data)
+      console.log(data)
     })
     .catch(err => console.log(err.message))
   }
 
   return (
     <>
+    <div id='guziczki'>
       <button onClick={Pokedex}>Losuj Pokemona!</button>
-      <Pokemon poke={pokemon}/>
+    </div>
+      <Pokemon poke={pokemon} />
+      <Zdjecie poke={pokemon}/>
+      <Audio poke={pokemon}/>
     </>
   )
 }
