@@ -23,9 +23,7 @@ function App() {
 
   return (
     <>
-    <div id='guziczki'>
       <button onClick={Pokedex}>Losuj Pokemona!</button>
-    </div>
       <Pokemon poke={pokemon} />
       <Zdjecie poke={pokemon}/>
       <Audio poke={pokemon}/>
