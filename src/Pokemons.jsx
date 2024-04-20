@@ -7,7 +7,7 @@ export default function Pokemon({poke}){
             
             return(
         <>
-            <h1>Pokemon: {Pokemun}</h1>
+            <h1>{Pokemun}</h1>
             <p>Typ: {poke?.types.map((typeP)=>wielkaLiterka(typeP.type.name)).join(", ") || "—"}</p>
             <p>Wysokość: {((poke?.height)*10) || "— "}cm</p>
             <p>Waga: {((poke?.weight)/10) || "— "}kg</p>
